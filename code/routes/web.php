@@ -14,4 +14,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-$router->get('/testapi', 'TestController@test');
+$router->get('/test_get', 'TestController@get');
+$router->get('/test_get/{id}', 'TestController@getDetail');
+$router->post('/test_post', 'TestController@post');
